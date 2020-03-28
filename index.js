@@ -1,5 +1,6 @@
 // VANILLA JS BABY
 const countries = [
+    {name:"..."},
     {name:"Kenya"},
     {name:"Uganda"},
     {name:"Tanzania"},
@@ -12,6 +13,7 @@ const countries = [
     // {name:"Egypt"},
     {name:"Nigeria"},
     // {name:"Ghana"},
+    {name:"Italy"},
 ]
 
 const process_response = function(response){
