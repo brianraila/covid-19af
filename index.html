@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Covid-19 Africa Data</title>
+  </head>
+  <body >
+    <header>
+      <!-- As a link -->
+      <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          <img src="images/covid.png" width="30" height="30" alt="">
+          Covid-19 in Africa
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <p></p>
+      <!-- <div class="container">
+        <div class="alert alert-dark" role="alert">
+          A simple dark alert—check it out!
+        </div>
+      </div> -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col sm-12 form-group">
+            <label for="exampleFormControlSelect2">Select your country</label>
+            <select class="form-control" id="country_select">
+            </select>
+          </div>
+        </div>
+       
+
+      </div>
+
+
+      <p></p>
+      <div class="container">
+        <div class="card" style="display: block;" id="results_card">
+          <div class="card-header" style="background-color: white;">
+            <a class="navbar-brand" style="color: black;" href="">
+              <img id="country_flag" src="images/covid.png" height="30" alt="">
+              <span id="country_code"></span>
+            </a>            
+          </div>
+          <div class="card-body" id="card_body">
+            </div>
+         <!-- content here  -->
+        </div>
+      </div>
+      
+    </main>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
