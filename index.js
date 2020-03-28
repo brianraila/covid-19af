@@ -1,19 +1,62 @@
 // VANILLA JS BABY
 const countries = [
     {name:"..."},
-    {name:"Kenya"},
-    {name:"Uganda"},
-    {name:"Tanzania"},
-    {name:"Rwanda"},
+    {name:"Algeria"},
+    {name:"Angola"},
+    {name:"Benin"},
+    {name:"Botswana"},
+    {name:"Burkina Faso"},
     {name:"Burundi"},
+    {name:"Cameroon"},
+    {name:"Cape Verde"},
+    {name:"Central African Republic"},
+    {name:"Chad"},
+    {name:"Comoros"},
+    {name:"Democratic Republic of Congo"},
+    {name:"Egypt"},
+    {name:"Equatorial Guinea"},
+    {name:"Eritrea"},
     {name:"Ethiopia"},
-    {name:"Somalia"},
-    {name:"Zambia"},
-    // {name:"Zimbabwe"},
-    // {name:"Egypt"},
+    {name:"Gabon"},
+    {name:"Gambia"},
+    {name:"Ghana"},
+    {name:"Guinea"},
+    {name:"Guinea-Bissau"},
+    {name:"Ivory Coast"},
+    {name:"Kenya"},
+    {name:"Lesotho"},
+    {name:"Liberia"},
+    {name:"Libya"},
+    {name:"Madagascar"},
+    {name:"Malawi"},
+    {name:"Mali"},
+    {name:"Mauritania"},
+    {name:"Mauritius"},
+    {name:"Mayotte (France)"},
+    {name:"Morocco"},
+    {name:"Mozambique"},
+    {name:"Namibia"},
+    {name:"Niger"},
     {name:"Nigeria"},
-    // {name:"Ghana"},
-    {name:"Italy"},
+    {name:"RÃ©union (France)"},
+    {name:"Republic of the Congo"},
+    {name:"Rwanda"},
+    {name:"SÃ£o TomÃ© and PrÃ­ncipe"},
+    {name:"Saint Helena, Ascension and Tristan da Cunha (UK)"},
+    {name:"Senegal"},
+    {name:"Seychelles"},
+    {name:"Sierra Leone"},
+    {name:"Somalia"},
+    {name:"South Africa"},
+    {name:"South Sudan"},
+    {name:"Sudan"},
+    {name:"Tanzania"},
+    {name:"Togo"},
+    {name:"Tunisia"},
+    {name:"Uganda"},
+    {name:"Western Sahara"},
+    {name:"Zambia"},
+    {name:"Zimbabwe"},
 ]
 
 const process_response = function(response){
@@ -57,7 +100,10 @@ const process_response = function(response){
       </li>
     </ul>
     <p></p>
-    <a href="#" class="btn btn-outline-success">Share</a>
+    <a href="" class="btn btn-outline-success"><i class="fa fa-share"></i> Share</a>
+    <a href="" class="btn btn-outline-success"><i class="fa fa-ellipsis-h"></i> Explore</a>
+
+    
     `
 }
 
