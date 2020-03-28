@@ -69,7 +69,7 @@ const process_response = function(response){
         <h6> ❌ Sorry ❌ <br>${response.message}</h6>`
       }
     document.getElementById('country_flag').setAttribute("src", response.countryInfo.flag || "covid.png")
-    document.getElementById('country_code').innerHTML = response.countryInfo.iso2 || "" ;
+    document.getElementById('country_code').innerHTML = `${response.country} - (${response.countryInfo.iso2})`;
     return `
     <h5 class="card-title" style="font-weight:bold">Today</h5>
     <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
@@ -77,27 +77,16 @@ const process_response = function(response){
       <li class="list-group-item">
         <p class="row">
           <span class="col">Cases: ${response.todayCases}</span>
-          <span class="col">Deaths: ${response.todayDeaths}</span>
-        </p>
-      </li>
-    </ul>
+          <span class="col">Deaths: ${response.todayDeaths}</span></p></li></ul>
     <p></p>
     <h6 style="font-weight: bold;">Alltime</h6>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
-        <p class="row">
-          <span class="col">Active: ${response.active}</span>
-          <span class="col">Recovery: ${response.recovered}</span>
-        </p>
-      </li>
+        <p class="row"><span class="col">Active: ${response.active}</span><span class="col">Recovery: ${response.recovered}</span></p></li>
       <li class="list-group-item">
         <p class="row">
           <span class="col">Critical: ${response.critical} </span>
-          <span class="col">Deaths: ${response.deaths}</span>
-        </p>
-      </li>
-    </ul>
-    <p></p>
+          <span class="col">Deaths: ${response.deaths}</span></p></li></ul><p></p>
     <a href="" class="btn btn-outline-success"><i class="fa fa-share"></i> Share</a>
     <a href="" class="btn btn-outline-success"><i class="fa fa-ellipsis-h"></i> Explore</a>
     
