@@ -1,8 +1,8 @@
-// VANILLA JS BABY
+//SURPRISE.....VANILLA JS BABY
 const countries = [
     {name:"..."},
     {name:"Algeria", iso2:"DZ"},
-    {name:"Angola",iso2:"DZ"},
+    {name:"Angola",iso2:"AO"},
     {name:"Benin",iso2:"BJ"},
     {name:"Botswana",iso2:"BW"},
     {name:"Burkina Faso",iso2:"BF"},
@@ -61,6 +61,18 @@ const countries = [
     {name:"Zimbabwe",iso2:"ZW"},
 ]
 
+const loadAggregated = function(){
+  let URL = 'http://localhost:8070' + '/aggr'
+  fetch(URL)
+  .then((response) => response.json())
+  .then(response => {
+    document.getElementById('card_body').innerHTML = process_response(response);
+  })
+  .catch((error)=>{
+    console.log(error);
+})
+}
+
 const process_response = function(response){
     if(response.message){
         document.getElementById('country_flag').setAttribute("src", "images/covid.png");
@@ -68,31 +80,28 @@ const process_response = function(response){
         return `
         <h6> ❌ Sorry ❌ <br>${response.message}</h6>`
       }
-    document.getElementById('country_flag').setAttribute("src", response.countryInfo.flag || "covid.png")
+    document.getElementById('country_flag').setAttribute("src", response.countryInfo.flag || "images/covid.png")
     document.getElementById('country_code').innerHTML = `${response.country} - (${response.countryInfo.iso2})`;
     return `
-    <h5 class="card-title" style="font-weight:bold">Today</h5>
-    <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p class="row">
-          <span class="col">Cases: ${response.todayCases}</span>
-          <span class="col">Deaths: ${response.todayDeaths}</span></p></li></ul>
-    <p></p>
-    <h6 style="font-weight: bold;">Alltime</h6>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p class="row"><span class="col">Active: ${response.active}</span><span class="col">Recovery: ${response.recovered}</span></p></li>
-      <li class="list-group-item">
-        <p class="row">
-          <span class="col">Critical: ${response.critical} </span>
-          <span class="col">Deaths: ${response.deaths}</span></p></li></ul><p></p>
-    <a href="" class="btn btn-outline-success"><i class="fa fa-share"></i> Share</a>
-    <a href="" class="btn btn-outline-success"><i class="fa fa-ellipsis-h"></i> Explore</a>
-    
-    `
+          <h5 class="card-title" style="font-weight:bold">Today</h5>
+          <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <p class="row">
+                <span class="col">Cases: ${response.todayCases}</span>
+                <span class="col">Deaths: ${response.todayDeaths}</span></p></li></ul>
+          <p></p>
+          <h6 style="font-weight: bold;">Alltime</h6>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <p class="row"><span class="col">Active: ${response.active}</span><span class="col">Recovery: ${response.recovered}</span></p></li>
+            <li class="list-group-item"><p class="row">
+                <span class="col">Critical: ${response.critical} </span>
+                <span class="col">Deaths: ${response.deaths}</span></p></li></ul><p></p>
+          <a href="" class="btn btn-outline-success"><i class="fa fa-share"></i> Share</a>
+          <a href="" class="btn btn-outline-success"><i class="fa fa-ellipsis-h"></i> Explore</a>
+          `
 }
-
 const country_select = document.getElementById('country_select');
 const API_URL = 'https://corona.lmao.ninja/countries/'
 
@@ -117,3 +126,14 @@ country_select.addEventListener("change", function(){
     })
 })
 
+// let countries_data = {countries:countries}
+
+
+// fetch("http://127.0.0.1:8070",{
+//   method: "POST",
+//   body: JSON.stringify({data:countries})})
+// .then((response) =>{
+//   return response.json();
+// }).then( data => {
+//   console.log(data);
+// })
