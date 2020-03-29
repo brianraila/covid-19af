@@ -62,7 +62,7 @@ const countries = [
 ]
 
 const loadAggregated = function(){
-  let URL = 'http://localhost:8070' + '/aggr'
+  let URL = 'https://covid-19af-flqkxxo7hq-ew.a.run.app' + '/aggr'
   fetch(URL)
   .then((response) => response.json())
   .then(response => {
