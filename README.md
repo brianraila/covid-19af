@@ -1,12 +1,22 @@
 # Covid-19af 
 
-Providing free and OSS data for Current cases and more stuff about COVID-19 in Africa.
+Providing realtime, accurate but free and OSS data for Current cases and more stuff about COVID-19 in Africa.
 
 ### Background
 After searching and failing to find a Covid-19 monitor mainly focused on African Countries. I decided to make one with a focus on the African continent.
 
+#### Currently its provides information on
+1. Active Cases
+2. All reported cases
+3. Critical cases
+4. Total number of deaths 😢
+5. Cases Recovered 👌🏿
+6. Cases Today
+7. Deaths Today
 
-## Frontend
+## Tools and Technologies.
+
+### Frontend
 1. Vanilla JS 
 2. HTML
 3. Bootstrap CSS
@@ -15,7 +25,7 @@ This code in available in the root folder of the project.
 This service is deployed [Netlify](https://netlify.com)
 
 
-## Backend
+### Backend
 1. Python
 2. Flask
 
