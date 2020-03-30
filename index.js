@@ -98,8 +98,6 @@ const process_response = function(response){
             <li class="list-group-item"><p class="row">
                 <span class="col">Critical: ${response.critical} </span>
                 <span class="col">Deaths: ${response.deaths}</span></p></li></ul><p></p>
-          <a href="" class="btn btn-outline-success"><i class="fa fa-share"></i> Share</a>
-          <a href="" class="btn btn-outline-success"><i class="fa fa-ellipsis-h"></i> Explore</a>
           `
 }
 const country_select = document.getElementById('country_select');
