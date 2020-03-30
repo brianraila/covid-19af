@@ -35,7 +35,7 @@ For the aggregated metrics
     
 For all the values, by country.
 
-    https://covid-19af.karat.co.ke/aggr
+    https://covid-19af.karat.co.ke/countries
 
     
  ## Credits.
