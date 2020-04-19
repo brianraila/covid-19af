@@ -101,7 +101,7 @@ const process_response = function(response){
           `
 }
 const country_select = document.getElementById('country_select');
-const API_URL = 'https://corona.lmao.ninja/countries/'
+const API_URL = 'https://corona.lmao.ninja/v2/countries/'
 
 for(r of countries){
         opt = document.createElement('option');
