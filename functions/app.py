@@ -6,8 +6,8 @@ import json
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-API_URL = "https://corona.lmao.ninja/countries"
-ALL_COUNTRY_UPDATES = "https://corona.lmao.ninja/countries?sort="
+API_URL = "https://corona.lmao.ninja/v2/countries"
+ALL_COUNTRY_UPDATES = "https://corona.lmao.ninja/v2/countries?sort="
 SUMMARY = ""
 
 app = Flask(__name__)
